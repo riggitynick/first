@@ -891,7 +891,7 @@ function renderPlaces(places) {
    // model.setAttribute('rotation', '180');
 
 
-     model.setAttribute('scale', '1.4 1.4 1.4');
+     model.setAttribute('scale', '.8 .8 .8');
     // model.setAttribute('color', 'green');
     // model.setAttribute('opacity', '0.75');
 
@@ -957,9 +957,9 @@ function staticLoadPlacesCU() {
         let modelCU = document.createElement('a-entity');
       modelCU.setAttribute('gps-entity-place', `latitude: ${latitudeCU}; longitude: ${longitudeCU};`);
       modelCU.setAttribute('gltf-model', 'models/CU-Logo-7-23-2020.gltf');
-      modelCU.setAttribute('scale', '10 10 10');
+      modelCU.setAttribute('scale', '8 8 8');
            //allows to rotate
-      modelCU.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 6000; easing: linear');
+      modelCU.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 4000; easing: linear');
       modelCU.addEventListener('loaded', () => {
      window.dispatchEvent(new CustomEvent('gps-entity-place-loadedCU'))
  
