@@ -260,8 +260,8 @@ margin-top:5%;
 
     
     <!-- ALLOWS ROTATION AND USES GYROSCOPE IN PHONE -->
-
-    <a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="8000"></a-camera>
+  <!-- THING FURTHER THAN HALF A MILE AWAY ARE MUCH HARDER TO CLICK ON - MAY NOT WORK -->
+    <a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="2000"></a-camera>
     
  
   </a-scene>
