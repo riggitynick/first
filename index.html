@@ -1,0 +1,275 @@
+<html>
+<meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+<meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+<link href="style.css">
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script>
+      THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+  </script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+
+<script src="script.js"></script>
+
+
+<!-- THIS STYLE NEEDS TO BE IN THE HTML DOCUMENT TO PREVENT A SKEWED ASPECT RATIO -->
+<style>
+
+html.a-fullscreen .a-canvas {
+      position: relative!important;
+      z-index:10;
+      margin-top: 23px; 
+    }
+
+a-canvas{
+  /* height: 50%; */
+  margin: 0; 
+} 
+
+a-scene{
+  margin: 0;
+  padding:0;
+  /* background-color: black; */
+}
+h1{
+  margin-top: 0;
+  padding: 0;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  padding-bottom: .5em;
+  font-size: 1.3em;
+}
+
+a{
+  text-decoration: none;
+}
+
+a h3{
+  color: rgb(252, 219, 76);
+  /* text-decoration: none;  find way to remove underlines*/
+}
+
+.img1{
+background-image: url(images/sbucks2.png);
+background-size: contain;
+height: 130px;
+width: 130px;
+margin: auto;
+margin-top: 5%;
+/* padding:3%; */
+}
+
+.img2{
+background-image: url(images/closeSymbol.png);
+background-size: contain;
+height: 60px;
+width: 60px;
+margin: auto;
+margin-top:5%;
+/* padding:3%; */
+}
+  #splashscreen {
+  font-family: Arial, Helvetica, sans-serif;
+   float: right;
+   margin: auto;
+   margin-top: 20px;
+    opacity: .85;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.closeSymbol{
+  /* background: url(images/x-icon-test.png) no-repeat; */
+  /* background-size: 15%; */
+  border: none;
+  /* font-weight:bold; */
+  color: black;
+  text-align: center;
+  font-size: 5em;
+  margin: auto;
+  margin-top: 10%;
+  width: 5%;
+  height: 5%;  
+}
+
+#hwPopup, #cuPopup, #rc2Popup, #ao1Popup, #b402Popup, #b401Popup, #b400Popup, #rc1nPopup, #rc1sPopup, 
+#pharmacyPopup, #b500Popup, #barbdavisPopup, #libraryPopup, #nighthorsePopup, #ed1Popup, 
+#dentalPopup, #fulgenetiPopup, #ed2nPopup, #ed2sPopup, #campservePopup {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+   margin: auto;
+   margin-top: 20px;
+   opacity: .85;
+   background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#enter_link {
+  line-height: 300px;
+  padding-bottom: 0;
+}
+#exitTestPopup {
+  line-height: 300px;
+  padding-bottom: 0;
+}
+
+#clickme {
+     font-family: Arial, Helvetica, sans-serif;
+     margin-bottom: 0;
+   /* margin-right: 50%; */
+     /* margin-top: .5vw; */
+    /* top: 50vw; */
+    /* left: 50%;  */
+    /* border-top: 10px; */
+    /* position: fixed; */
+    /* z-index: -2; */
+    padding: .05em;
+    padding-bottom: .25em;
+    border-radius: 4px;
+    /* border: none; */
+    opacity: .85;
+    background-color: black;
+    color: rgb(12, 190, 6);
+    text-align: center;
+    width: 100%;
+    height: 1.6em;
+  }
+
+  .closingText{
+    font-size: 1.7em;
+    text-decoration: none;
+    color: rgb(12, 190, 6);
+    margin: auto;
+    width: fit-content;
+    border: 2px solid rgb(12, 190, 6);
+    padding: 2px;
+    }
+
+ 
+
+    </style>
+
+
+<!-- ADDED POINTS ATTRIBUTE TO COUNT POINTS -->
+
+<body style="margin: 0; overflow: hidden;">
+<a-canvas>
+
+  <div id="clickme" onclick="mapView()">
+    <h2>Open Store Map/Locator</h2>
+  </div>
+
+<!-- this used to be above clickme -->
+  <a-scene vr-mode-ui="enabled: false">
+    <!-- points  clickhandler not needed -->
+
+   
+
+    <div id="splashscreen">
+     <!-- <img src="images/x-icon-test.png" alt="test" width="50" height="50"> -->
+      
+              <!-- MAKE THIS INTO A NAVIGATION BAR -->
+              <div class="img1"></div>
+       <h2>Welcome.<br>
+        This is an AR map of<br>
+        Colorado Starbucks Locations<br><br>
+        Click on the Coffee cups<br>
+        for ordering and directions<br>
+      </h2>
+      
+           <h4>
+            <!-- <img src="images/sbucks logo.png" width="200" height="200"> -->
+            To use this site correctly:<br>
+        -Use a <span style="color: rgb(65, 182, 250);">MOBILE</span> device such as a cell phone<br>
+        -Allow this site to access your <span style="color: green;">LOCATION</span><br>
+        -Allow this site to access your <span style="color: green;">CAMERA</span><br>
+        
+        
+        <!-- <a href="#" style="font-size: .7em;  vertical-align: text-top;" id="enter_link" onclick="removeSplash()"></a> -->
+          <div class="img2" id="enter_link" onclick="removeSplash()">
+             </div>
+            <!-- </a> -->
+                 </h4>
+                 
+                  
+                 
+    </div>
+  
+
+     <!-- Pop-Ups -->
+        <!-- healthandwellness       old =  https://www.starbucks.com/menu/store-locator/12z -->
+      <div id="hwPopup">
+        <br>
+        <div class="img1"></div>
+        <br><a href="https://www.starbucks.com/menu" target="blank">
+          <div class="closingText">ORDER</div>
+          </a> <br> 
+          <a href="https://www.google.com/maps/search/starbucks/" target="blank">
+            <div class="closingText">DIRECTIONS</div>
+            </a>
+       
+        <div class="img2" onclick="removeHwPopup()"></div>
+      </div>
+
+   <!-- cu      -->
+   <div id="cuPopup">
+    <br>
+    <div class="img1"></div>
+    <br><a href="https://www.starbucks.com/menu" target="blank">
+      <div class="closingText">CU ORDER</div>
+      </a> <br> 
+      <a href="https://www.google.com/maps/search/starbucks/" target="blank">
+        <div class="closingText">CU DIRECTIONS</div>
+        </a>
+   
+    <div class="img2" onclick="removeCuPopup()"></div>
+  </div>
+
+
+
+
+  
+
+  
+
+
+     <!-- START OF ANSCHUTZ MAP     -->
+     <!-- TRANSPARENT VERSION -->
+
+
+     <!-- <a-gltf-model  src="models/coffeeCup2Sharp.gltf" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;" position="-3 0 6" scale="20 20 20" healthandwellness></a-gltf-model> -->
+
+
+
+<!--tester-->
+<!-- <a-gltf-model src="models/CU-Logo-7-9-2020.gltf" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;" gps-entity-place="latitude: 39.478393; longitude: -105.081809" scale="1 1 1" testcorner></a-gltf-model>
+ -->
+
+<!-- <a-gltf-model src="models/CU-Logo-7-9-2020.gltf" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;" gps-entity-place="latitude: 39.476898; longitude: -105.081777" scale=".5 .5 .5" test2></a-gltf-model> -->
+
+    
+    <!-- ALLOWS ROTATION AND USES GYROSCOPE IN PHONE -->
+
+    <a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="3000"></a-camera>
+    
+ 
+  </a-scene>
+</a-canvas>
+
+</body>
+</html>
+
+<!-- 
+THIS IS HOW THE CAMERA NEEDS TO BE SETUP TO PREVENT CLIPPING:<a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="5000"></a-camera>
+     -->
