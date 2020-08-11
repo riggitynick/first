@@ -41,7 +41,7 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   padding-bottom: .5em;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 a{
@@ -185,9 +185,11 @@ margin-top:5%;
         This is an AR map of<br>
         Colorado Starbucks Locations<br><br>
         Click on the Coffee cups<br>
-        for ordering and directions
+        for ordering and directions<br>
+        (objects further than 0.5 <br>
+        mile away = unclickable)
          </h2>
-         <h5>(objects further than 0.5 mile away = unclickable)</h5>
+         
         <br>
       
       
@@ -259,7 +261,7 @@ margin-top:5%;
     
     <!-- ALLOWS ROTATION AND USES GYROSCOPE IN PHONE -->
   <!-- THING FURTHER THAN HALF A MILE AWAY ARE MUCH HARDER TO CLICK ON - MAY NOT WORK -->
-    <a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="1200"></a-camera>
+    <a-camera gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" cursor="rayOrigin: mouse" fov="47" near="0.5" far="1005"></a-camera>
     
  
   </a-scene>
