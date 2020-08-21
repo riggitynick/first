@@ -1069,11 +1069,12 @@ model.addEventListener('click', () => {
   //window.open("https://www.starbucks.com/menu?_branch_match_id=713537451166389183", "Starbucks Order");
   document.getElementById("hwPopup").style.display ="unset";
 
-  if (modelHeight<=18.19){
+  if (modelHeight<=18.14){
     //score++;
     model.remove();
   }
 
+  //modelHeight<=18.19
 //  document.getElementById("hwPopup").style.display ="unset";
 
   //HAS TO BE CONNECTED TO ANSCHUTZ WIFI TO WORK - Building floor plans
