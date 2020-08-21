@@ -878,6 +878,8 @@ function staticLoadPlaces() {
 { location: {lat: 39.475872,lng: -105.084223,  }, },
 
 
+{ location: {lat: 39.476860,lng: -105.081618,  }, },
+
         ];
         }
         
