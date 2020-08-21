@@ -1069,7 +1069,7 @@ model.addEventListener('click', () => {
   //window.open("https://www.starbucks.com/menu?_branch_match_id=713537451166389183", "Starbucks Order");
   document.getElementById("hwPopup").style.display ="unset";
 
-  if (modelHeight<=18.17){
+  if (modelHeight<=18.18){
     //score++;
     model.remove();
   }
