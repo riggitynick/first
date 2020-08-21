@@ -1080,10 +1080,11 @@ model.addEventListener('click', () => {
 
      scene.appendChild(model);
 
+let camHeight = document.querySelector("a-camera"); 
 
-
-     if (modelHeight<18.9){
+     if (modelHeight<=camHeight.position){
       //score++;
+      scene.removeChild(model);
       this.model.remove();
     }
 
