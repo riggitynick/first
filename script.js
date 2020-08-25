@@ -1090,7 +1090,7 @@ model.addEventListener('click', () => {
 
 
      let camHeight = document.querySelector("a-camera"); 
-     if ([(p + t) * 0.3]<=23.79){
+     if ([(p + t) * 0.3]<=23.805){
     // if (model.modelHeight<=90){
       //if (modelHeight<=1800){               camHeight.position.y
          //score++;
