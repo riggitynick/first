@@ -1070,6 +1070,11 @@ model.addEventListener('click', () => {
   document.getElementById("hwPopup").style.display ="unset";
 
 
+
+
+
+
+
   //modelHeight<=18.19
 //  document.getElementById("hwPopup").style.display ="unset";
 
@@ -1080,13 +1085,32 @@ model.addEventListener('click', () => {
 
      scene.appendChild(model);
 
-let camHeight = document.querySelector("a-camera"); 
 
-     if (modelHeight<=camHeight.position){
-      //score++;
-      scene.removeChild(model);
-      this.model.remove();
-    }
+
+     let camHeight = document.querySelector("a-camera"); 
+     if (modelHeight<=camHeight.position.y){
+       //if (modelHeight<=1800){
+         //score++;
+        //  scene.removeChild(model);
+          this.remove();
+        }
+
+
+
+
+
+
+   //if (model.position.y >= 22000){
+
+ //  model.object3D.position.y
+
+//if (this.position.y<=10){
+
+  // score++;
+  // scene.removeChild(model);
+   //this.el.remove();
+ //}
+
 
  });
 }
