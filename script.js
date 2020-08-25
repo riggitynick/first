@@ -995,6 +995,8 @@ let modelHeight = [(p + t) * 0.3];
 
    
    console.log(location.long);
+   
+   console.log(modelHeight);
     //let size = '0.1, 0.1, 0.1';
 
     //  model.addEventListener('clickhandler2');
@@ -1088,8 +1090,9 @@ model.addEventListener('click', () => {
 
 
      let camHeight = document.querySelector("a-camera"); 
-     if (modelHeight<=camHeight.position.y){
-       //if (modelHeight<=1800){
+     if ([(p + t) * 0.3]<=23.79){
+    // if (model.modelHeight<=90){
+      //if (modelHeight<=1800){               camHeight.position.y
          //score++;
         //  scene.removeChild(model);
           this.remove();
