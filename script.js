@@ -1097,7 +1097,8 @@ model.addEventListener('click', () => {
       if (modelHeight<=camHeight2.y-16.316){               
          //score++;
         //  scene.removeChild(model);          
-          this.object3D.remove();
+         // this.object3D.remove();
+          model.remove();
           console.log(camHeight2.y);
         }
 
