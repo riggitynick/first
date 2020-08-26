@@ -880,6 +880,20 @@ function staticLoadPlaces() {
 
 { location: {lat: 39.476860,lng: -105.081618,  }, },
 
+{ location: {lat: 39.486156, lng: -105.076937,  }, },
+
+{ location: {lat: 39.486637, lng: -105.080879,  }, },
+
+{ location: {lat: 39.487117, lng: -105.084821,  }, },
+
+{ location: {lat: 39.487384, lng: -105.088002,  }, },
+
+{ location: {lat: 39.487491, lng: -105.092704,  }, },
+
+{ location: {lat: 39.490639, lng: -105.094087,  }, },
+
+{ location: {lat: 39.495923, lng: -105.092497,  }, },
+
         ];
         }
         
