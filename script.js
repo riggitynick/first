@@ -1090,12 +1090,15 @@ model.addEventListener('click', () => {
 
 
      let camHeight = document.querySelector("a-camera"); 
-     if ([(p + t) * 0.3]<=23.805){
-    // if (model.modelHeight<=90){
-      //if (modelHeight<=1800){               camHeight.position.y
+     let camHeight2 = camHeight.object3D.position;
+
+    // if ([(p + t) * 0.3]<=23.805){
+    // if (model.modelHeight<=23.805){
+      if (modelHeight<=camHeight2.y-16.32){               
          //score++;
-        //  scene.removeChild(model);
-          this.remove();
+        //  scene.removeChild(model);          
+          model.remove();
+          console.log(camHeight2.y);
         }
 
 
