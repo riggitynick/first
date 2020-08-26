@@ -1094,10 +1094,10 @@ model.addEventListener('click', () => {
 
     // if ([(p + t) * 0.3]<=23.805){
     // if (model.modelHeight<=23.805){
-      if (modelHeight<=camHeight2.y-16.32){               
+      if (modelHeight<=camHeight2.y-16.316){               
          //score++;
         //  scene.removeChild(model);          
-          model.remove();
+          this.object3D.remove();
           console.log(camHeight2.y);
         }
 
