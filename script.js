@@ -1098,7 +1098,7 @@ model.addEventListener('click', () => {
          //score++;
         //  scene.removeChild(model);          
          // this.object3D.remove();
-          model.remove();
+          this.model.remove();
           console.log(camHeight2.y);
         }
 
